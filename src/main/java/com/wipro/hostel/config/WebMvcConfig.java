@@ -1,10 +1,19 @@
 package com.wipro.hostel.config;
 
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Info;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
+@OpenAPIDefinition(
+    info = @Info(
+        title = "Hostel Management System API",
+        version = "1.0.0",
+        description = "REST API documentation for Hostel Management System"
+    )
+)
 public class WebMvcConfig implements WebMvcConfigurer {
 
     @Override
